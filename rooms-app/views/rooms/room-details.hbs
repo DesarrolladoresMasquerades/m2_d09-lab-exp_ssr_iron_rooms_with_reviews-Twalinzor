@@ -1,0 +1,46 @@
+a href="/rooms">Go back</a>
+
+<h2>{{room.name}}</h2>
+
+<div>
+
+    {{#if roomOwner}}
+    <div>
+        <img src="{{room.imgUrl}}" alt="room avatar">
+    </div>
+
+    <div>
+        <p>Description: {{room.description}}</p>
+        <p>Owner: {{room.owner.username}}</p>
+        {{#each room.reviews}}
+        REVIEWS
+        {{/each}}
+    </div>
+
+    <div>
+        
+            <button><a href="/rooms/{{_id}}/edit">EDIT</a></button>
+            <button><a href="/rooms/{{_id}}/delete">DELETE</a></button>
+        
+    </div>
+
+        {{else}}
+    <div>
+        <img src={{imgUrl}} alt="room avatar">
+    </div>
+
+    <div>
+        <p>Description: {{description}}</p>
+        <p>Owner: {{owner.username}}</p>
+        {{#each reviews}}
+        REVIEWS
+        {{/each}}
+    </div>
+    
+
+    {{/if}}
+
+    
+    
+
+</div>

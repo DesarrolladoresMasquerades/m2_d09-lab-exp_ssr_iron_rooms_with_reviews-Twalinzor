@@ -1,0 +1,16 @@
+<h2>Rooms</h2>
+
+<a href="/rooms/create">Add a new room</a>
+
+<hr />
+
+<div>
+  {{#each rooms}}
+
+    <a href="/rooms/{{_id}}/details">
+      <img src="{{imgUrl}}" alt="room avatar" />
+      <p>{{name}}</p>
+    </a>
+
+  {{/each}}
+</div>
